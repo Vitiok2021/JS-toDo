@@ -16,7 +16,15 @@ function render() {
     btn.addEventListener('click', () => delTask(i))
     btn.classList.add('del-btn')
     btn.innerHTML = 'Видалити'
-    item.textContent = tasks[i].title
+    let chk = document.createElement('input')
+    chk.type = 'checkbox'
+    chk.checked = tasks[i].checked
+    chk.addEventListener('change', () => {
+      tasks[i].checked = chk.checked
+      render()
+    })
+    item.append(chk)
+    item.append(document.createTextNode(tasks[i].title))
     item.append(btn)
     list[0].append(item)
   }
@@ -25,10 +33,10 @@ document.querySelector('.add-task').addEventListener('click', addTask)
 
 function addTask() {
   let val = document.querySelector('.new-task').value
-  //   console.log(val)
   tasks.push({ title: val, checked: false })
   render()
 }
+
 function toggleTask() {}
 function delTask(index) {
   tasks.splice(index, 1)
