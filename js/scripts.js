@@ -5,9 +5,24 @@ let tasks = [
   },
 ]
 
+const activeAll = 'all'
+const newTask = 'new'
+const chked = 'checked'
+
+let activeFilter = activeAll
+
 function render() {
   let list = document.getElementsByClassName('task-list')
   list[0].innerHTML = ''
+
+  let filteredTasks = [...tasks]
+
+  if (filteredTasks === activeAll) {
+  }
+
+  let counter = tasks.length
+  let done = tasks.filter((t) => t.checked).length
+  document.querySelector('.counter-item').innerHTML = counter
 
   for (let i = 0; i < tasks.length; i++) {
     let item = document.createElement('li')
@@ -28,6 +43,7 @@ function render() {
     item.append(btn)
     list[0].append(item)
   }
+  document.querySelector('.new-task').value = ''
 }
 document.querySelector('.add-task').addEventListener('click', addTask)
 
