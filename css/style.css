@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+
+  transition: background-color 0.3s ease 0s;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+.counter {
+  margin-bottom: 15px;
+}
+.counter-item {
+  font-size: 18px;
+}
+.new-task {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color: lightcyan;
+  border-radius: 5px;
+  width: 300px;
+}
+.add-task {
+  background-color: lightcoral;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+}
+.add-task:hover {
+  background-color: lightpink;
+}
+.task-list {
+  margin-bottom: 25px;
+}
+.task-item {
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.show-all {
+  background-color: lightblue;
+}
+.ended {
+  background-color: lightsalmon;
+}
+.new {
+  background-color: lightskyblue;
+}
+.show-all:hover {
+  background-color: rgb(147, 206, 226);
+}
+.ended:hover {
+  background-color: rgb(245, 194, 175);
+}
+.new:hover {
+  background-color: rgb(138, 172, 194);
+}
+.del-btn {
+  background-color: rgb(243, 159, 159);
+}
+.del-btn:hover {
+  background-color: rgb(202, 133, 133);
+}
